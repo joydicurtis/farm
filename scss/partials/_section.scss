@@ -1,0 +1,251 @@
+.section {
+    padding: 20px 0;
+    @include breakpoint(medium) {
+        padding: 40px 0;
+    }
+}
+.section__gray {
+    position: relative;
+    background: $gray;
+    padding: 40px 15px;
+    @include breakpoint(medium) {
+        padding: 70px 0;
+    }
+    &:before {
+        content: ' ';
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include breakpoint(xlarge) {
+            content: none;
+        }
+    }
+    .section_content {
+        background: rgba(10, 114, 219, .95);
+        @include breakpoint(xlarge) {
+            background: rgba(10, 114, 219, 1);
+        }
+    }
+}
+.section__white {
+    position: relative;
+    padding: 40px 15px;
+    @include breakpoint(medium) {
+        padding: 70px 0;
+    }
+    &:before {
+        content: ' ';
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include breakpoint(xlarge) {
+            content: none;
+        }
+    }
+    .section_content {
+        background: rgba(123, 123, 123, .95);
+        @include breakpoint(medium) {
+            margin-left: 40%;
+        }
+        @include breakpoint(xlarge) {
+            margin-left: 50%;
+            background: rgba(123, 123, 123, 1);
+        }
+    }
+    .section_link { 
+        text-align: right;
+        margin-left: 0;
+        margin-right: 40px;
+    }
+}
+.section__first {
+    background: url('../images/first-bg.png') $gray no-repeat;
+    background-position: right;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__second {
+    background: url('../images/second-bg.png') $white no-repeat;
+    background-position: left;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__third {
+    background: url('../images/third-bg.png') $gray no-repeat;
+    background-position: right;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__forth {
+    background: url('../images/forth-bg.png') $white no-repeat;
+    background-position: left;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__fifth{
+    background: url('../images/fifth-bg.png') $gray no-repeat;
+    background-position: right;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__sixth {
+    background: url('../images/sixth-bg.png') $white no-repeat;
+    background-position: left;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__seventh{
+    background: url('../images/seventh-bg.png') $gray no-repeat;
+    background-position: right;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section__eighth {
+    background: url('../images/eighth-bg.png') $white no-repeat;
+    background-position: left;
+    background-size: cover;
+    @include breakpoint(xlarge) {
+        background-size: contain;
+    }
+}
+.section_content {
+    color: $white;
+    padding: 40px;
+    margin-bottom: 20px;
+    @include breakpoint(medium) {
+        padding: 80px 40px;
+        width: 60%;
+    }
+    @include breakpoint(large) {
+        margin-bottom: 40px;
+    }
+    @include breakpoint(xlarge) {
+        width: 50%;
+    }
+}
+.section_link {
+    a {
+        position: relative;
+        color: #181515;
+        font-size: $fontSize-small;
+        font-weight: $fontWeight-bold;
+        margin-left: 40px;
+        transition: all .3s ease-in-out;
+        @include breakpoint(medium) {
+            font-size: $fontSize-base;
+        }
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            color: $color-secondary;
+            &:after {
+                right: -35px;
+            }
+        }
+        &:after {
+            position: absolute;
+            content: '\f178';
+            font-family: 'fontawesome';
+            color: $color-secondary;
+            transition: all .3s ease-in-out;
+            top: 0;
+            right: -25px;
+        }
+    }
+}
+#simple-popup {
+    .simple-popup-content {
+        position: relative;
+        background: url("../images/popup-bg.png")!important;
+        background-size: cover!important;
+        padding: 40px;
+        @include breakpoint(medium) {
+            padding: 45px 70px;
+        }
+        @include breakpoint(xlarge) {
+            width: 1140px!important;
+            padding: 60px 70px;
+        }
+        .close {
+            top: 40px;
+            right: 15px;
+            background: $color-secondary;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            &::before {
+                font-size: 32px;
+                color: $white;
+                width: 32px;
+                line-height: 32px;
+            }
+        }
+        .section_popup_img {
+            width: 100px;
+            margin-bottom: 15px;
+            @include breakpoint(medium) {
+                position: absolute;
+                top: 40px;
+            }
+            @include breakpoint(xlarge) {
+                width: 150px;
+            }
+        }
+        h1 {
+            color: $color-primary;
+            font-size: $fontSize-larger;
+            @include breakpoint(medium) {
+                margin-bottom: 40px;
+            }
+        }
+        li {
+            position: relative;
+            list-style: none;
+            &::before {
+                content: ' ';
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: $color-primary;
+                display: inline-block;
+                position: absolute;
+                left: -20px;
+                top: 5px;
+            }
+        }
+    }
+}
+#section_popup__first,
+#section_popup__second,
+#section_popup__third,
+#section_popup__forth,
+#section_popup__fifth,
+#section_popup__sixth,
+#section_popup__seventh {
+    display: none;
+}
+.js-section-popup {
+    overflow: hidden;
+}

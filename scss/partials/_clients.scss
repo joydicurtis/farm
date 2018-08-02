@@ -1,0 +1,44 @@
+.slick-initialized .slick-slide {
+    position: relative;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    margin: 0 50px;
+    img {
+        display: inline;
+        vertical-align: middle;
+    }
+}
+.slick-arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-secondary;
+    border: none;
+    color: white;
+    margin-top: 25px;
+    top: 0;
+    z-index: 100;
+    font-size: 0;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+    &.slick-prev {
+        left: 0;
+        &::before {
+            content: '\f177';
+            font-family: 'fontawesome';
+            font-size: $fontSize-base;
+        }
+    }
+    &.slick-next {
+        right: 0;
+        &::before {
+            content: '\f178';
+            font-family: 'fontawesome';
+            font-size: $fontSize-base;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.footer {
+    background: url('../images/footer-bg.png') no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    color: $white;
+    a {
+        color: $white;
+    }
+}
+.footer-logo {
+    width: 100px;
+    margin: 0 auto;
+    @include breakpoint(medium) {
+        width: 200px;
+    }
+    @include breakpoint(large) {
+        width: auto;
+    }
+}
+.footer-contacts {
+    @include breakpoint(medium) {
+        padding: 30px 0;
+    }
+    @include breakpoint(large) {
+        padding: 65px 0;
+    }
+}
+.footer-form {
+    @include breakpoint(medium) {
+        width: 400px;
+    }
+    @include breakpoint(large) {
+        width: auto;
+    }
+    input[type="text"],
+    input[type="email"] {
+        background: rgba(255, 255, 255, .2);
+        border-radius: 20px;
+        height: 50px;
+        padding: 20px 30px;
+        color: $white;
+        border: solid 1px $white;
+        margin-bottom: 15px;
+        font-size: $fontSize-small;
+        outline: none;
+        transition: all .3s ease-in-out;
+        @include breakpoint(medium) {
+            font-size: $fontSize-base;
+        }
+        &:focus {
+            background: rgba(123, 123, 123, .62);
+        }
+    }
+    input, 
+    textarea {
+        @include breakpoint(medium) {
+            font-size: $fontSize-base;
+        }
+        &::placeholder {
+            color: $white;
+        }
+    }
+    textarea {
+        background: rgba(255, 255, 255, .2);
+        border-radius: 20px;
+        padding: 20px 30px;
+        color: $white;
+        border: solid 1px $white;
+        font-size: $fontSize-small;
+        outline: none;
+        transition: all .3s ease-in-out;
+        margin-bottom: 15px;
+        &:focus {
+            background: rgba(123, 123, 123, .62);
+        }
+    }
+    input[type="submit"] {
+        background: $color-secondary;
+        height: 50px;
+        color: $white;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        padding: 0 70px;
+        border-radius: 20px;
+        font-size: $fontSize-large;
+        font-weight: $fontWeight-bold;
+        text-transform: uppercase;
+    }
+}

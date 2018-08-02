@@ -1,0 +1,145 @@
+.section-how-we-work {
+    position: relative;
+    background: url('../images/pills.png') no-repeat;
+    background-size: cover;
+    color: $white;
+    &:before {
+        content: ' ';
+        background: rgba(10, 114, 219, .77);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include breakpoint(xlarge) {
+            width: 75%;
+        }
+    }
+    &:after {
+        @include breakpoint(xlarge) {
+            content: ' ';
+            display: block;
+            background: url(../images/corner.svg) no-repeat;
+            background-size: cover;
+            width: 25%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 75%;
+        }
+    }
+}
+.section-how-we-work-item {
+    position: relative;
+    border-left: solid 6px $white;
+    padding-left: 24px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    @include breakpoint(medium) {
+        display: table;
+        padding-bottom: 0;
+    }
+    @include breakpoint(xlarge) {
+        max-width: 75%;
+    }
+    &:last-child {
+        padding-bottom: 0;
+        &::after {
+            content: ' ';
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: -18px;
+        }
+    }
+    &::before {
+        content: ' ';
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: -18px;
+    }
+    @include breakpoint(medium) {
+        border: none;
+        margin-left: 0;
+        padding-left: 0;
+        &::before {
+            content: none;
+        }
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    &:last-child {
+        .section-how-we-work-item_text {
+            &::after {
+                @include breakpoint(medium) {
+                    content: ' ';
+                    width: 30px;
+                    height: 30px;
+                    background: #fff;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    bottom: -1px;
+                    left: -18px;
+                    @include breakpoint(large) {
+                        width: 40px;
+                        height: 40px;
+                        left: -23px;
+                    }
+                }
+            }
+        }
+    }
+}
+.section-how-we-work-item_title {
+    position: relative;
+    font-size: $fontSize-base;
+    font-weight: $fontWeight-bold;
+    padding-bottom: 5px;
+    @include breakpoint(medium) {
+        display: table-cell;
+        width: 215px;
+        font-size: $fontSize-larger;
+        padding-right: 30px;
+    }
+}
+.section-how-we-work-item_text {
+    @include breakpoint(medium) {
+        position: relative;
+        display: table-cell;
+        border-left: solid 6px $white;
+        padding-left: 30px;
+        padding-bottom: 30px;
+        &::before {
+            content: ' ';
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: -1px;
+            left: -18px;
+            @include breakpoint(large) {
+                width: 40px;
+                height: 40px;
+                left: -23px;
+            }
+        }
+    }
+    @include breakpoint(large) {
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,23 @@
+.why-us-item {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.why-us-item_icon {
+    width: 80px;
+    margin: 0 auto 5px;
+    @include breakpoint(medium) {
+        min-height: 70px;
+    }
+}
+.why-us-item-text {
+    span {
+        font-weight: $fontWeight-bold;
+        font-size: $fontSize-base;
+        @include breakpoint(large) {
+            font-size: $fontSize-large;
+        }
+        @include breakpoint(xlarge) {
+            font-size: $fontSize-larger;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.site_teaser {
+    position: relative;
+    background: url(../images/teaser.png) no-repeat;
+    padding: 30px 0;
+    background-size: 100%;
+    margin-bottom: 20px;
+    @include breakpoint(medium) {
+        padding: 80px 0;
+    }
+    @include breakpoint(large) {
+        padding: 120px 0;
+        margin-bottom: 40px;
+    }
+    @include breakpoint(xlarge) {
+        padding: 160px 0;
+        background-size: cover;
+    }
+    @include breakpoint(xxlarge) {
+        padding: 220px 0 250px;
+    }
+    &::before {
+        content: ' ';
+        display: block;
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include breakpoint(xlarge) {
+            content: none;
+        }
+    }
+}
+.site_teaser-title {
+    font-size: $fontSize-larger;
+    font-weight: $fontWeight-extrabold;
+    color: #221d86;
+    font-style: italic;
+    @include breakpoint(medium) {
+        font-size: 45px;
+    }
+}
+.site_teaser-subtitle {
+    font-size: $fontSize-small;
+    font-weight: $fontWeight-semibold;
+    color: #251d02;
+    @include breakpoint(medium) {
+        font-size: $fontSize-larger;
+    }
+}
