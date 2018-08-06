@@ -41,7 +41,6 @@
         }
       });
     }
-
     $('.slider').slick({
       dots: false,
       infinite: false,
@@ -119,11 +118,19 @@
       });
       $("a.scrollto").click(function() {
         var elementClick = $(this).attr("href")
-        var destination = $(elementClick).offset().top-120;
+        if ($(window).width()>1023) {
+          var destination = $(elementClick).offset().top-120;
+        }
+        else {
+          var destination = $(elementClick).offset().top;
+        }
         jQuery("html:not(:animated),body:not(:animated)").animate({
           scrollTop: destination
         }, 1000);
         return false;
+      });
+      $('.site_header-nav a').click(function (e) {
+        $('.site_header').removeClass('is-open');
       });
   });
   

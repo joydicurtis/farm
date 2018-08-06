@@ -5,6 +5,12 @@
 .why-us-item_icon {
     width: 80px;
     margin: 0 auto 5px;
+    transition: all .3s ease-in-out;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
     @include breakpoint(medium) {
         min-height: 70px;
     }

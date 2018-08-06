@@ -111,7 +111,7 @@
     @include breakpoint(medium) {
         display: table-cell;
         width: 215px;
-        font-size: $fontSize-larger;
+        font-size: $fontSize-large;
         padding-right: 30px;
     }
 }

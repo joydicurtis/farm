@@ -67,67 +67,91 @@
     }
 }
 .section__first {
-    background: url('../images/first-bg.png') $gray no-repeat;
-    background-position: right;
+    background: url('../images/first-bg.jpg') $gray no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: 300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: right;
     }
 }
 .section__second {
-    background: url('../images/second-bg.png') $white no-repeat;
-    background-position: left;
+    background: url('../images/second-bg.jpg') $white no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: -300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: left;
     }
 }
 .section__third {
-    background: url('../images/third-bg.png') $gray no-repeat;
-    background-position: right;
+    background: url('../images/third-bg.jpg') $gray no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: 300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: right;
     }
 }
 .section__forth {
-    background: url('../images/forth-bg.png') $white no-repeat;
-    background-position: left;
+    background: url('../images/forth-bg.jpg') $white no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: -300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: left;
     }
 }
 .section__fifth{
-    background: url('../images/fifth-bg.png') $gray no-repeat;
-    background-position: right;
+    background: url('../images/fifth-bg.jpg') $gray no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: 300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: right;
     }
 }
 .section__sixth {
-    background: url('../images/sixth-bg.png') $white no-repeat;
-    background-position: left;
+    background: url('../images/sixth-bg.jpg') $white no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: left;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: left;
     }
 }
 .section__seventh{
-    background: url('../images/seventh-bg.png') $gray no-repeat;
-    background-position: right;
+    background: url('../images/seventh-bg.jpg') $gray no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: 300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: right;
     }
 }
 .section__eighth {
-    background: url('../images/eighth-bg.png') $white no-repeat;
-    background-position: left;
+    background: url('../images/eighth-bg.jpg') $white no-repeat;
     background-size: cover;
     @include breakpoint(xlarge) {
         background-size: contain;
+        background-position: -300px 0;
+    }
+    @include breakpoint(xxlarge) {
+        background-position: left;
     }
 }
 .section_content {

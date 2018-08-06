@@ -7,6 +7,12 @@
     img {
         display: inline;
         vertical-align: middle;
+        transition: all .3s ease-in-out;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
     }
 }
 .slick-arrow {
